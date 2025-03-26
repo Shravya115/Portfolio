@@ -4,8 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000;
+            color: #ff3d00;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .nav-link {
+            color: #ff5722;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: white;
+            text-shadow: 0px 0px 10px #ff3d00;
+        }
+
+        /* Button Styling */
+        .btn {
+            background: #ff3d00;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px #ff5722;
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #ff3d00;
+        }
+
+        /* Education Section */
+        .education-container {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background: #111;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ff3d00;
+        }
+        
+        .education-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .education-item {
+            background: #222;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px #ff3d00;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; background-color: #000; color: #ff3d00; padding: 20px; margin: 0;">
+<body>
 
     <!-- Navigation Bar -->
     <nav style="background: #111; padding: 15px; text-align: center; border-radius: 10px;">
@@ -29,66 +105,35 @@
         thrive in a dynamic environment where hard work is rewarded, and career advancement is always a possibility.
     </p>
 
-    <!-- Highlighted Info Section -->
-    <div style="display: flex; justify-content: center; margin-top: 30px;">
-        <div class="info-box">🎓 Education: Master’s in Software Technology</div>
+    <!-- Buttons Section (Side by Side) -->
+    <div style="margin-top: 30px;">
+        <button class="btn" onclick="toggleEducation()">Education</button>
+        <a href="projects.html" class="btn">View Projects</a>
     </div>
 
-    <!-- Animated Button -->
-    <div style="margin-top: 40px;">
-        <a href="projects.html" class="btn">View My Projects</a>
+    <!-- Education Details Section -->
+    <div id="education-container" class="education-container">
+        <div class="education-title">Education Background</div>
+        <div class="education-item"><strong>MSc in Software Technology</strong><br>St. Aloysius College - AIMIT, Mangalore<br>(Pursuing)</div>
+        <div class="education-item"><strong>BSc </strong>Computer Science,Mathematics,Physics</strong><br>University College Mangalore<br>(2020-2023)</div>
+        <div class="education-item"><strong>PUC </strong><br>St Ann's PU College, Mangalore<br>(2018-2020)</div>
+        <div class="education-item"><strong>SSLC</strong><br>Cascia High School, Mangalore<br>(2018)</div>
     </div>
 
     <footer style="margin-top: 50px; font-size: 14px; color: #888;">
         <p>© 2025 Shravya S | All Rights Reserved</p>
     </footer>
 
-    <!-- CSS Styling -->
-    <style>
-        /* Navigation Bar */
-        .nav-link {
-            color: #ff5722;
-            margin: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
+    <script>
+        function toggleEducation() {
+            var eduSection = document.getElementById('education-container');
+            if (eduSection.style.display === 'none' || eduSection.style.display === '') {
+                eduSection.style.display = 'block';
+            } else {
+                eduSection.style.display = 'none';
+            }
         }
-
-        .nav-link:hover {
-            color: white;
-            text-shadow: 0px 0px 10px #ff3d00;
-        }
-
-        /* Info Box Styling */
-        .info-box {
-            background: #111;
-            padding: 12px 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px #ff3d00;
-            color: rgb(214, 23, 23);
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* Button Styling */
-        .btn {
-            background: #ff3d00;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-weight: bold;
-            box-shadow: 0px 0px 10px #ff5722;
-        }
-
-        .btn:hover {
-            background: white;
-            color: #ff3d00;
-        }
-    </style>
+    </script>
 
 </body>
 </html>
